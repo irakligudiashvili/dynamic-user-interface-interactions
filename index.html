@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <style>
+        body{
+            background-color: rgb(78, 70, 70);
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-menu a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-menu a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .dropdown.visible .dropdown-menu {
+            display: block;
+        }
+
+        .carousel {
+            position: relative;
+            width: 600px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        .carousel-container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            display: block;
+        }
+
+        .carousel-prev, .carousel-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .carousel-prev {
+            left: 10px;
+        }
+
+        .carousel-next {
+            right: 10px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+        }
+
+        .carousel-dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .carousel-dot.active {
+            background-color: #717171;
+        }
+    </style>
+</head>
+<body>
+
+<div class="dropdown">
+    <button class="dropdown-toggle">Dropdown</button>
+    <div class="dropdown-menu">
+        <a href="#action1">Action 1</a>
+        <a href="#action2">Action 2</a>
+        <a href="#action3">Action 3</a>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropdown-toggle">Dropdown</button>
+    <div class="dropdown-menu">
+        <a href="#action1">Action 1</a>
+        <a href="#action2">Action 2</a>
+        <a href="#action3">Action 3</a>
+    </div>
+</div>
+
+<script src="dropdown.js"></script>
+
+
+<div class="carousel">
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <img src="image1.jpeg" alt="Image 1">
+        </div>
+        <div class="carousel-slide">
+            <img src="image2.svg" alt="Image 2">
+        </div>
+        <div class="carousel-slide">
+            <img src="image3.svg" alt="Image 3">
+        </div>
+    </div>
+    <button class="carousel-prev">‹</button>
+    <button class="carousel-next">›</button>
+    <div class="carousel-dots"></div>
+</div>
+
+<script src="carousel.js"></script>
+
+</body>
+</html>
